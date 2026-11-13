@@ -30,7 +30,7 @@ export default function BrandStory() {
         <div className="relative order-2 lg:order-1">
           <div className="dot-grid overflow-hidden border border-cream/10 bg-sand">
             <img
-              src="/images/rk84-75-wired-rgb-limited.webp"
+              src={`${import.meta.env.BASE_URL}images/l75-75-wireless.webp`}
               alt="Limited edition 75% mechanical keyboard with grey, white and black keycaps"
               loading="lazy"
               className="product-photo"
