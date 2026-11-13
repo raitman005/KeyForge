@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Body text: DM Sans, 400, 16px */
+  body {
+    @apply bg-cream font-sans text-base font-normal text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  /* Buttons: DM Sans, 700, 14px */
+  button {
+    @apply font-sans text-[14px] font-bold;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid #bd7045;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Hero heading: Playfair Display, 700, 64px on desktop (scales down on small screens) */
+  .hero-heading {
+    @apply font-display text-[40px] font-bold leading-[1.05] tracking-tight sm:text-[52px] lg:text-[64px];
+  }
+
+  /* Section heading: Playfair Display, 700, 40px on desktop (scales down on small screens) */
+  .section-heading {
+    @apply font-display text-[30px] font-bold leading-tight sm:text-[34px] md:text-[40px];
+  }
+
+  /* Product name: DM Sans, 700, 20px */
+  .product-name {
+    @apply font-sans text-[20px] font-bold leading-snug;
+  }
+
+  /* Navigation: DM Sans, 600, 14px */
+  .nav-text {
+    @apply font-sans text-[14px] font-semibold;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3 font-sans text-[14px] font-bold text-cream shadow-soft transition duration-200 hover:-translate-y-0.5 hover:bg-accent hover:shadow-lift active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/25 bg-transparent px-6 py-3 font-sans text-[14px] font-bold text-ink transition duration-200 hover:-translate-y-0.5 hover:border-ink hover:bg-ink hover:text-cream active:translate-y-0;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-accent;
+  }
+
+  .section-pad {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  /* Subtle dotted paper texture used on retro panels */
+  .dot-grid {
+    background-image: radial-gradient(rgba(52, 41, 31, 0.12) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+
+  /* Product photos have white studio backgrounds; multiply blends them into the panel. */
+  .product-photo {
+    @apply aspect-[16/10] w-full object-cover mix-blend-multiply;
+  }
+}

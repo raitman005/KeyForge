@@ -1,0 +1,80 @@
+// Single source of truth for the catalog.
+// Image files live in public/images and are named after the keyboard they show.
+
+export const categories = [
+  {
+    id: '60',
+    title: '60% Compact Keyboards',
+    description: 'Minimal footprint, maximum desk space. Arrow keys live on a layer.',
+    keyCount: '61 keys',
+    image: '/images/rk61-60-wireless.webp',
+    imageAlt: 'RK61 60% wireless mechanical keyboard with grey and white keycaps',
+  },
+  {
+    id: '75',
+    title: '75% Wireless Keyboards',
+    description: 'Our signature layout. Function row, arrows and wireless freedom.',
+    keyCount: '82 keys',
+    image: '/images/l75-75-wireless.webp',
+    imageAlt: 'L75 75% wireless mechanical keyboard with a volume knob',
+  },
+  {
+    id: 'tkl',
+    title: 'TKL Mechanical Keyboards',
+    description: 'Tenkeyless with a full nav cluster for coders and gamers alike.',
+    keyCount: '87 keys',
+    image: '/images/rk87-tkl-wireless.webp',
+    imageAlt: 'RK87 wireless TKL mechanical keyboard in white',
+  },
+];
+
+export const products = [
+  {
+    id: 'kf75-classic',
+    name: 'L75 75%',
+    layout: '75%',
+    categoryId: '75',
+    connectivity: 'Wireless',
+    price: 5200,
+    badge: 'Best Seller',
+    image: '/images/l75-75-wireless.webp',
+    imageAlt: 'L75 75% Wireless Mechanical Keyboard with a volume knob',
+    description: 'Hot-swappable switches, 8000mAh battery, and customizable controls.',
+  },
+  {
+    id: 'kf60-heritage',
+    name: 'RK61 60% (New Color-Block Edition)',
+    layout: '60%',
+    categoryId: '60',
+    connectivity: 'Wired',
+    price: 3900,
+    badge: 'Compact',
+    image: '/images/rk61-60-wireless.webp',
+    imageAlt: 'KF60 Heritage 60% mechanical keyboard with grey and white keycaps',
+    description: 'Compact 61-key design for precision gaming and portability.',
+  },
+  {
+    id: 'kf87-workshop',
+    name: 'RK Sink87G RK87',
+    layout: 'TKL',
+    categoryId: 'tkl',
+    connectivity: 'Wireless',
+    price: 4300,
+    badge: 'New',
+    image: '/images/rk87-tkl-wireless.webp',
+    imageAlt: 'KF87 Workshop white wireless TKL mechanical keyboard',
+    description: 'Dedicated for FPS Pro, Dual Modes Connection & Ergonomic 8° Angle or Add a Pad Foot',
+  },
+  {
+    id: 'kf75-artisan',
+    name: 'RK84 Wired RGB',
+    layout: '75%',
+    categoryId: '75',
+    connectivity: 'Wireless',
+    price: 3900,
+    badge: 'Limited Edition',
+    image: '/images/rk84-75-wired-rgb-limited.webp',
+    imageAlt: 'KF75 Artisan limited edition 75% mechanical keyboard',
+    description: '84-key compact design saves 25% desk space without sacrificing functionality.',
+  },
+];
