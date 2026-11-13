@@ -76,7 +76,7 @@ export default function Hero() {
               <span className="h-2.5 w-2.5 bg-ink/25" />
             </div>
             <img
-              src="/images/l75-75-wireless.webp"
+              src={`${import.meta.env.BASE_URL}images/l75-75-wireless.webp`}
               alt="KF75 Classic 75% wireless mechanical keyboard"
               className="mt-4 aspect-[16/11] w-full animate-float object-cover mix-blend-multiply"
             />
